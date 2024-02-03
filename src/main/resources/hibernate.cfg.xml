@@ -10,9 +10,11 @@
         <property name="connection.password">Leavemealone13</property>
 
         <property name="current_session_context_class">thread</property>
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+<!--        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
         <property name="show_sql">true</property>
-
+        <mapping class="com.xask.database.entity.Security"/>
+        <mapping class="com.xask.database.entity.Department"/>
+        <mapping class="com.xask.database.entity.Document"/>
 
     </session-factory>
 </hibernate-configuration>

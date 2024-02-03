@@ -1,4 +1,4 @@
-package com.xask.database.config;
+package com.xask.database.util;
 import com.xask.database.converter.BirthDayConverter;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

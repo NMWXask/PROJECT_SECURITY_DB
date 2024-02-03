@@ -1,2 +1,10 @@
-package com.xask.database.entity;public record Birthday() {
+package com.xask.database.entity;
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public record Birthday(LocalDate birthDay) {
+    public long getAge(){
+        return ChronoUnit.YEARS.between(birthDay,LocalDate.now());
+    }
 }
