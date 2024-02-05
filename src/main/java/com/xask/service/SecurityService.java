@@ -16,10 +16,9 @@ public class SecurityService {
     private final DepartmentService departmentService;
 
     public Security create(SecurityDTO dto){
-        String fullName = dto.getName()+ " "+dto.getSecondName()+" "+dto.getSurname();
 
         Security security = Security.builder()
-                .fullName(fullName)
+                .fullName(dto.getFullName())
                 .department(departmentService.readById(dto.getDepartmentId()))
                 .build();
 
@@ -29,7 +28,7 @@ public class SecurityService {
         return securityRepository.findByDepartment(id);
     }
 
-    public List<Security>returnAll(){
+    public List<Security> readAll(){
         return securityRepository.findAll();
     }
 

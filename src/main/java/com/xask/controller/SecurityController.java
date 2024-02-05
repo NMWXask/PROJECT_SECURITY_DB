@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/securities")
+//@RequestMapping("/")
 @AllArgsConstructor
 public class SecurityController {
     private final SecurityService securityService;
@@ -22,7 +22,7 @@ public class SecurityController {
 
     @GetMapping
     public ResponseEntity<List<Security>>readAll(){
-        return mappingResponseListSecurity(securityService.returnAll());
+        return mappingResponseListSecurity(securityService.readAll());
     }
 
     @GetMapping("/department/{id}")

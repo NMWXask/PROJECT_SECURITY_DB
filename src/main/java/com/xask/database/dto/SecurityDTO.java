@@ -6,8 +6,6 @@ import java.time.LocalDate;
 
 @Data
 public class SecurityDTO {
-    private String name;
-    private String secondName;
-    private String surname;
+    private String fullName;
     private int departmentId;
 }
