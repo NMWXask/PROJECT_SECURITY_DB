@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface SecurityRepository extends JpaRepository<Security,Integer> {
-    List<Security> findByDepartment(Integer id);
+    List<Security> findByDepartmentId(Integer id);
 }

@@ -1,10 +1,9 @@
 package com.xask.database.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xask.database.converter.BirthDayConverter;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDate;
 
 @Entity
 @Builder
@@ -15,7 +14,7 @@ import java.time.LocalDate;
 @ToString(exclude = "department")
 public class Security {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
     @Column(name = "full_name")
@@ -28,6 +27,7 @@ public class Security {
     @Column(name = "department_id",insertable=false, updatable=false)
     private Integer departmentId;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;

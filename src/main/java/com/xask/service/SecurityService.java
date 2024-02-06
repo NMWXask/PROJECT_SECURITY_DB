@@ -4,12 +4,13 @@ import com.xask.database.dto.SecurityDTO;
 import com.xask.database.entity.Security;
 import com.xask.repository.SecurityRepository;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class SecurityService {
 
     private final SecurityRepository securityRepository;
@@ -25,11 +26,12 @@ public class SecurityService {
         return securityRepository.save(security);
     }
     public List<Security>readByDepartmentId(Integer id){
-        return securityRepository.findByDepartment(id);
+        return securityRepository.findByDepartmentId(id);
     }
 
     public List<Security> readAll(){
-        return securityRepository.findAll();
+        List<Security> list = securityRepository.findAll();
+        return list;
     }
 
     public Security update(Security security){

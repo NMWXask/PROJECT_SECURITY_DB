@@ -3,6 +3,7 @@ import com.xask.database.dto.SecurityDTO;
 import com.xask.database.entity.Security;
 import com.xask.service.SecurityService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-//@RequestMapping("/")
-@AllArgsConstructor
+@RequestMapping("/securities")
+@RequiredArgsConstructor
 public class SecurityController {
     private final SecurityService securityService;
 

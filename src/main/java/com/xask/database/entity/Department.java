@@ -1,9 +1,11 @@
 package com.xask.database.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @Builder
@@ -18,6 +20,8 @@ public class Department {
     @Column(unique = true, nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
+    @JsonIgnore
+    @OneToMany(mappedBy = "department")
     private List<Security>securities;
+
 }
