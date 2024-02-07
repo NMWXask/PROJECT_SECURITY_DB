@@ -9,7 +9,6 @@ import lombok.*;
 @NoArgsConstructor
 @Data
 @Table(name = "securities",schema = "project")
-@ToString(exclude = "department")
 public class Security {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +24,6 @@ public class Security {
     @Column(name = "department_id",insertable=false, updatable=false)
     private Integer departmentId;
 
-//    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
