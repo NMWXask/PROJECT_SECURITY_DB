@@ -27,7 +27,7 @@ public class Security {
     @Column(name = "department_id",insertable=false, updatable=false)
     private Integer departmentId;
 
-    @JsonIgnore
+//    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
