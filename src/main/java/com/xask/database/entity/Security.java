@@ -1,6 +1,4 @@
 package com.xask.database.entity;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xask.database.converter.BirthDayConverter;
 import jakarta.persistence.*;
 import lombok.*;

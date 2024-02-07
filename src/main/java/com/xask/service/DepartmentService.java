@@ -1,5 +1,4 @@
 package com.xask.service;
-
 import com.xask.database.entity.Department;
 import com.xask.repository.DepartmentRepository;
 import lombok.AllArgsConstructor;

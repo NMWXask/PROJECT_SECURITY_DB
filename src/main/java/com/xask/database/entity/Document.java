@@ -1,9 +1,7 @@
 package com.xask.database.entity;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import lombok.*;
-
 import java.time.LocalDate;
 
 @Getter
