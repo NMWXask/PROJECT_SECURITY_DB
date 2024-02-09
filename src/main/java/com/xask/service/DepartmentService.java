@@ -19,5 +19,4 @@ public class DepartmentService {
         return departmentRepository.findById(id)
                 .orElseThrow(()->new RuntimeException("Данного отдела нет в списке. "+id));
     }
-
 }

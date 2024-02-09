@@ -1,6 +1,6 @@
 CREATE SCHEMA PROJECT;
 
-CREATE TABLE PROJECT.securities (
+CREATE TABLE IF NOT EXISTS PROJECT.securities (
                                     id int NOT NULL AUTO_INCREMENT,
                                     full_name varchar(150) NOT NULL ,
                                     gender varchar(5),
@@ -8,16 +8,25 @@ CREATE TABLE PROJECT.securities (
                                     department_id int,
                                     PRIMARY KEY (id)
 );
-CREATE TABLE PROJECT.departments(
+CREATE TABLE IF NOT EXISTS PROJECT.departments(
                                     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                                     name VARCHAR (10) NOT NULL
 );
-CREATE TABLE PROJECT.documents(
+CREATE TABLE IF NOT EXISTS PROJECT.documents(
                                   security_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
                                   health_permit DATE,
                                   knowledge_permit DATE,
                                   weapon_permit DATE
 );
+
+CREATE TABLE IF NOT EXISTS PROJECT.users(
+    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+    email VARCHAR(50)NOT NULL UNIQUE ,
+    password VARCHAR(90)NOT NULL UNIQUE ,
+    role VARCHAR(10) DEFAULT '{noop}123'
+);
+drop table PROJECT.users;
+
 drop table PROJECT.securities;
 
 drop table PROJECT.departments;
