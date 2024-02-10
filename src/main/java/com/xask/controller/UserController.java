@@ -28,7 +28,6 @@ public class UserController {
 
     @GetMapping()
     public ResponseEntity<List<User>>readAll(){
-        System.out.println("readAll Controller");
         return mappingResponseListUser(userService.findAll());
     }
 
