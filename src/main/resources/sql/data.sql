@@ -131,6 +131,6 @@ VALUES ('1','2023-06-12','2023-11-12','2019-04-20'),
        ('61','2023-02-20', '2023-12-02', '2021-01-07'),
        ('62','2023-03-22', '2023-10-12', '2022-06-11');
 
-INSERT INTO project.users(email, password, role)
-VALUES ('critina@gmail.com','dgfahrphfihifgdpsoifrpoij/fohewhirufhijnfru','ADMIN'),
-       ('artamon@yandex.ru','dgfahrphdhgfkagrkfrfggoij/fohewhirufhijnfru','USER');
+INSERT INTO project.users(username,role)
+VALUES ('critina@gmail.com','ADMIN'),
+       ('artamon@yandex.ru','USER');

@@ -14,8 +14,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
-    @Column(name = "email")
-    private String email;
+    @Column(name = "username")
+    private String username;
     @Column(name = "password")
     private String password;
     @Enumerated(EnumType.STRING)
