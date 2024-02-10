@@ -17,7 +17,7 @@ public class UserController {
 
     @GetMapping("/newUser")
     public ResponseEntity<User> create(@RequestBody UserDTO dto){
-        return mappingResponseUser(userService.create(dto));
+        return mappingResponseUser(userService.save(dto));
     }
 
     @DeleteMapping("/user{id}")
@@ -28,7 +28,8 @@ public class UserController {
 
     @GetMapping()
     public ResponseEntity<List<User>>readAll(){
-        return mappingResponseListUser(userService.readAll());
+        System.out.println("readAll Controller");
+        return mappingResponseListUser(userService.findAll());
     }
 
     private ResponseEntity<User>mappingResponseUser(User user){

@@ -30,8 +30,7 @@ public class SecurityService {
     }
 
     public List<Security> readAll(){
-        List<Security> list = securityRepository.findAll();
-        return list;
+        return securityRepository.findAll();
     }
 
     public Security update(Security security){

@@ -12,7 +12,7 @@ import java.util.List;
 public class UserService{
     private final UserRepository userRepository;
 
-    public User create(UserDTO dto){
+    public User save(UserDTO dto){
 
         User user = User.builder()
                 .email(dto.getEmail())
@@ -27,9 +27,9 @@ public class UserService{
         userRepository.deleteById(id);
     }
 
-    public List<User> readAll(){
-        List<User> list = userRepository.findAll();
-        return list;
+    public List<User> findAll(){
+        System.out.println("readAll Service");
+        return userRepository.findAll();
     }
 
 }
