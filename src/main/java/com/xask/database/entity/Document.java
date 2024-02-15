@@ -1,6 +1,7 @@
 package com.xask.database.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.*;
 import java.time.LocalDate;
 
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Table(name = "documents")
 public class Document {
     @Id
     @Column(name = "security_id")

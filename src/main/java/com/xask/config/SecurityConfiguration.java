@@ -18,8 +18,12 @@ public class SecurityConfiguration {
                         .anyRequest().authenticated())
                 .formLogin(login->login
                         .loginPage("/login")
-                        .defaultSuccessUrl("/users")
-                        .permitAll());
+                        .defaultSuccessUrl("/securities")
+                        .permitAll())
+                .logout(logOut->logOut.logoutUrl("/logout")
+                        .logoutSuccessUrl("/login")
+                        .deleteCookies("JSESSIONID"));
+
         return http.build();
 
     }
