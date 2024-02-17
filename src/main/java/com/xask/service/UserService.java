@@ -13,7 +13,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class UserService implements UserDetailsService {
+public class UserService {
     private final UserRepository userRepository;
 
     public User save(UserDTO dto){
@@ -35,14 +35,14 @@ public class UserService implements UserDetailsService {
         return userRepository.findAll();
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByUsername(username)
-                .map(user-> new org.springframework.security.core.userdetails.User(
-                        user.getUsername(),
-                        user.getPassword(),
-                        Collections.singleton(user.getRole())
-                ))
-                .orElseThrow(()->new UsernameNotFoundException("Failed to retrieve user :"+username));
-    }
+//    @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//        return userRepository.findByUsername(username)
+//                .map(user-> new org.springframework.security.core.userdetails.User(
+//                        user.getUsername(),
+//                        user.getPassword(),
+//                        Collections.singleton(user.getRole())
+//                ))
+//                .orElseThrow(()->new UsernameNotFoundException("Failed to retrieve user :"+username));
+//    }
 }
