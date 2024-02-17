@@ -18,22 +18,6 @@ public class SecurityConfiguration {
     private final JwtAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
 
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        http.csrf(CsrfConfigurer::disable)
-//                .authorizeHttpRequests(auth->auth
-//                        .anyRequest().authenticated())
-//                .formLogin(login->login
-//                        .loginPage("/login")
-//                        .defaultSuccessUrl("/index")
-//                        .permitAll())
-//                .logout(logOut->logOut.logoutUrl("/logout")
-//                        .logoutSuccessUrl("/login")
-//                        .deleteCookies("JSESSIONID"));
-//
-//        return http.build();
-//    }
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
