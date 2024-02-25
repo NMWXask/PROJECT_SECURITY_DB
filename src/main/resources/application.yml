@@ -18,8 +18,8 @@ logging:
     root: INFO
     com.com.xask: TRACE
   file:
-    name: deletion.log
-    path: com/xask/logs
+    name: D:/Проект/PROJECT_SECURITY_DB/src/main/java/com/xask/logs/application.log
+    path:
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
   logback:
