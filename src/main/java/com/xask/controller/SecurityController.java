@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/securities")
+@RequestMapping("/api/v1/securities")
 @RequiredArgsConstructor
 @EnableMethodSecurity
 public class SecurityController {

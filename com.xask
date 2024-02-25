@@ -1,0 +1,31 @@
+2024-02-25T10:54:16.468+04:00  INFO 23636 --- [main] com.xask.ProjectSecurityDbApplication    : Starting ProjectSecurityDbApplication using Java 17.0.8.1 with PID 23636 (D:\Проект\PROJECT_SECURITY_DB\target\classes started by i4Nat in D:\Проект\PROJECT_SECURITY_DB)
+2024-02-25T10:54:16.471+04:00  INFO 23636 --- [main] com.xask.ProjectSecurityDbApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-02-25T10:54:17.110+04:00  INFO 23636 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-25T10:54:17.173+04:00  INFO 23636 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-02-25T10:54:17.741+04:00  INFO 23636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-02-25T10:54:17.752+04:00  INFO 23636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-25T10:54:17.753+04:00  INFO 23636 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-02-25T10:54:17.824+04:00  INFO 23636 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-25T10:54:17.824+04:00  INFO 23636 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1314 ms
+2024-02-25T10:54:17.953+04:00  INFO 23636 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-25T10:54:18.005+04:00  INFO 23636 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2024-02-25T10:54:18.140+04:00  WARN 23636 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2024-02-25T10:54:18.234+04:00  INFO 23636 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-25T10:54:18.529+04:00  INFO 23636 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@116fc29e
+2024-02-25T10:54:18.531+04:00  INFO 23636 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-25T10:54:18.549+04:00  INFO 23636 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-02-25T10:54:18.549+04:00  WARN 23636 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-25T10:54:19.264+04:00  INFO 23636 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-25T10:54:19.272+04:00  INFO 23636 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T10:54:19.703+04:00  WARN 23636 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-25T10:54:19.779+04:00  INFO 23636 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-02-25T10:54:19.951+04:00  INFO 23636 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@183435c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69862a1, org.springframework.security.web.context.SecurityContextHolderFilter@7325b786, org.springframework.security.web.header.HeaderWriterFilter@bb160fb, org.springframework.security.web.authentication.logout.LogoutFilter@47a90d2a, com.xask.config.JwtAuthenticationFilter@fef2768, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c376b44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47596e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@585718dd, org.springframework.security.web.session.SessionManagementFilter@86e8469, org.springframework.security.web.access.ExceptionTranslationFilter@2f6352a3, org.springframework.security.web.access.intercept.AuthorizationFilter@44b5b54]
+2024-02-25T10:54:20.182+04:00  INFO 23636 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-25T10:54:20.190+04:00  INFO 23636 --- [main] com.xask.ProjectSecurityDbApplication    : Started ProjectSecurityDbApplication in 4.09 seconds (process running for 5.371)
+2024-02-25T10:54:34.248+04:00  INFO 23636 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-25T10:54:34.249+04:00  INFO 23636 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-25T10:54:34.250+04:00  INFO 23636 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-02-25T10:55:11.784+04:00  INFO 23636 --- [http-nio-8080-exec-2] com.xask.aop.Aspect                      :  Попытка удаления сотрудника в классе com.xask.service.SecurityService@c7d173f, с id 62. 
+2024-02-25T11:02:27.836+04:00  INFO 23636 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25T11:02:27.837+04:00  INFO 23636 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-25T11:02:27.844+04:00  INFO 23636 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

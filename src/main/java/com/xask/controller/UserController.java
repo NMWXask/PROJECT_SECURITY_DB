@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
@@ -26,7 +26,7 @@ public class UserController {
         userService.delete(id);
         return HttpStatus.OK;
     }
-
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
     @GetMapping()
     public ResponseEntity<List<User>>readAll(){
         return mappingResponseListUser(userService.findAll());

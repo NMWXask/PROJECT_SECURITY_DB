@@ -1,0 +1,31 @@
+2024-02-25 11:28:55 - Starting ProjectSecurityDbApplication using Java 17.0.8.1 with PID 28312 (D:\Проект\PROJECT_SECURITY_DB\target\classes started by i4Nat in D:\Проект\PROJECT_SECURITY_DB)
+2024-02-25 11:28:55 - No active profile set, falling back to 1 default profile: "default"
+2024-02-25 11:28:55 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-25 11:28:55 - Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
+2024-02-25 11:28:56 - Tomcat initialized with port(s): 8080 (http)
+2024-02-25 11:28:56 - Starting service [Tomcat]
+2024-02-25 11:28:56 - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-02-25 11:28:56 - Initializing Spring embedded WebApplicationContext
+2024-02-25 11:28:56 - Root WebApplicationContext: initialization completed in 1096 ms
+2024-02-25 11:28:56 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-25 11:28:56 - HHH000412: Hibernate ORM core version 6.1.6.Final
+2024-02-25 11:28:56 - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2024-02-25 11:28:56 - HikariPool-1 - Starting...
+2024-02-25 11:28:57 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@714bffd5
+2024-02-25 11:28:57 - HikariPool-1 - Start completed.
+2024-02-25 11:28:57 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-02-25 11:28:57 - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-02-25 11:28:57 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-25 11:28:57 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25 11:28:58 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-25 11:28:58 - Adding welcome page: class path resource [static/index.html]
+2024-02-25 11:28:58 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f3c27e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fd4850b, org.springframework.security.web.context.SecurityContextHolderFilter@507187c1, org.springframework.security.web.header.HeaderWriterFilter@5bb661e0, org.springframework.security.web.authentication.logout.LogoutFilter@436103b1, com.xask.config.JwtAuthenticationFilter@12948e7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5bb90b89, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10b0dd3a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1db9d253, org.springframework.security.web.session.SessionManagementFilter@193d73d3, org.springframework.security.web.access.ExceptionTranslationFilter@3f473daf, org.springframework.security.web.access.intercept.AuthorizationFilter@3df7e309]
+2024-02-25 11:28:58 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-25 11:28:58 - Started ProjectSecurityDbApplication in 3.698 seconds (process running for 4.279)
+2024-02-25 11:29:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-25 11:29:08 - Initializing Servlet 'dispatcherServlet'
+2024-02-25 11:29:08 - Completed initialization in 1 ms
+2024-02-25 11:29:08 -  Попытка удаления сотрудника в классе com.xask.service.SecurityService@48dc9950, с id 59. 
+2024-02-25 11:31:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-25 11:31:21 - HikariPool-1 - Shutdown initiated...
+2024-02-25 11:31:21 - HikariPool-1 - Shutdown completed.

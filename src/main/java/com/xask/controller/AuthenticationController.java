@@ -1,5 +1,6 @@
 package com.xask.controller;
 
+import com.xask.exceptions.NonAuthenticatedUserException;
 import com.xask.security_response_request.AuthenticationRequest;
 import com.xask.security_response_request.AuthenticationResponse;
 import com.xask.security_response_request.RegisterRequest;
@@ -19,7 +20,7 @@ public class AuthenticationController {
     private final AuthenticationService service;
 
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse>register(
+    public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
     ){
         return ResponseEntity.ok(service.register(request));
@@ -28,7 +29,7 @@ public class AuthenticationController {
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody AuthenticationRequest request
-    ){
+    ) throws NonAuthenticatedUserException {
         return ResponseEntity.ok(service.authenticate(request));
     }
 }

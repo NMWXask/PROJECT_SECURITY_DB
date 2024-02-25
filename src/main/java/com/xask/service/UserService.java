@@ -30,15 +30,4 @@ public class UserService {
     public List<User> findAll(){
         return userRepository.findAll();
     }
-
-//    @Override
-//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        return userRepository.findByUsername(username)
-//                .map(user-> new org.springframework.security.core.userdetails.User(
-//                        user.getUsername(),
-//                        user.getPassword(),
-//                        Collections.singleton(user.getRole())
-//                ))
-//                .orElseThrow(()->new UsernameNotFoundException("Failed to retrieve user :"+username));
-//    }
 }

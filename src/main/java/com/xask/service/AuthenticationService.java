@@ -2,6 +2,7 @@ package com.xask.service;
 
 import com.xask.database.entity.Role;
 import com.xask.database.entity.User;
+import com.xask.exceptions.NonAuthenticatedUserException;
 import com.xask.repository.UserRepository;
 import com.xask.security_response_request.AuthenticationRequest;
 import com.xask.security_response_request.AuthenticationResponse;
@@ -35,14 +36,15 @@ public class AuthenticationService {
                 .build();
     }
 
-    public AuthenticationResponse authenticate(AuthenticationRequest request) {
+    public AuthenticationResponse authenticate(AuthenticationRequest request) throws NonAuthenticatedUserException {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                      request.getUsername(),
                      request.getPassword()
                 )
         );
-        var user = repository.findByUsername(request.getUsername()).orElseThrow();// todo создать свое исключение на данный случай
+        var user = repository.findByUsername(request.getUsername())
+                .orElseThrow(()->new NonAuthenticatedUserException("Пользователь не авторизован."));
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
