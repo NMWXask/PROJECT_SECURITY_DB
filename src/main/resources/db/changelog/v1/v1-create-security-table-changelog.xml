@@ -1,0 +1,44 @@
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+ <changeSet id="v1-1" author="Mikhaylov Nikolay">
+     <preConditions>
+         <not>
+             <tableExists tableName="securiies"/>
+         </not>
+     </preConditions>
+
+     <createTable tableName="securities">
+         <column name="id" type="int" autoIncrement="true" >
+             <constraints primaryKey="true" nullable="false"/>
+         </column>
+         <column name="full_name" type="varchar(150)">
+             <constraints nullable="false"/>
+         </column>
+         <column name="gender" type="varchar(5)"/>
+         <column name="birth_date" type="date"/>
+         <column name="department_id" type="int"/>
+     </createTable>
+ </changeSet>
+
+    <!-- ChangeSet для создания таблицы departments -->
+    <changeSet id="2" author="your_name">
+        <preConditions>
+            <not>
+                <tableExists tableName="departments"/>
+            </not>
+        </preConditions>
+        <createTable tableName="departments">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(10)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+</databaseChangeLog>
