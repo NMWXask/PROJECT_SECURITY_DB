@@ -3,7 +3,6 @@ package com.xask.service;
 import com.xask.database.dto.SecurityDTO;
 import com.xask.database.entity.Security;
 import com.xask.repository.SecurityRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,16 +19,16 @@ public class SecurityService {
 
         Security security = Security.builder()
                 .fullName(dto.getFullName())
-                .department(departmentService.readById(dto.getDepartmentId()))
+                .department(departmentService.findById(dto.getDepartmentId()))
                 .build();
 
         return securityRepository.save(security);
     }
-    public List<Security>readByDepartmentId(Integer id){
+    public List<Security> findByDepartmentId(Integer id){
         return securityRepository.findByDepartmentId(id);
     }
 
-    public List<Security> readAll(){
+    public List<Security> findAll(){
         return securityRepository.findAll();
     }
 

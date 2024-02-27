@@ -24,12 +24,12 @@ public class SecurityController {
 
     @GetMapping
     public ResponseEntity<List<Security>>readAll(){
-        return mappingResponseListSecurity(securityService.readAll());
+        return mappingResponseListSecurity(securityService.findAll());
     }
 
     @GetMapping("/department/{id}")
     public ResponseEntity<List<Security>>readByDepartmentId(@PathVariable Integer id){
-        return mappingResponseListSecurity(securityService.readByDepartmentId(id));
+        return mappingResponseListSecurity(securityService.findByDepartmentId(id));
     }
     @PreAuthorize("hasAnyAuthority('ADMIN')")
     @PutMapping

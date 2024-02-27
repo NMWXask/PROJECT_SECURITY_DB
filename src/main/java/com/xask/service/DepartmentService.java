@@ -11,11 +11,11 @@ import java.util.List;
 public class DepartmentService {
     private final DepartmentRepository departmentRepository;
 
-    public List<Department>readAll(){
+    public List<Department> findAll(){
         return departmentRepository.findAll();
     }
 
-    public Department readById(Integer id){
+    public Department findById(Integer id){
         return departmentRepository.findById(id)
                 .orElseThrow(()->new RuntimeException("Данного отдела нет в списке. "+id));
     }
